@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  padding: 20px 0;
+  margin: 0;
+}
+#menu {
+  margin-top: 20px;
+}
+
+#task-form {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#user-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#user-input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+#list-container {
+  padding: 20px;
+  margin: 0px auto;
+  max-width: 1200px;
+}
+
+.task-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+/* Add border when input is not readonly and focused */
+.description:not([readonly]) {
+  border: 2px solid rgb(237, 198, 198);
+}
+
+.completed-checkbox {
+  appearance: none; /* Remove default checkbox appearance */
+  width: 16px;
+  height: 16px;
+  border: 2px solid #4caf50; /* Border for checkbox */
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.completed-checkbox:checked {
+  background-color: #4caf50; /* Background color when checked */
+}
+
+.edit-button,
+.delete-button {
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 14px;
+}
+
+/* Hover effect */
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Scale up the button on hover */
+}
+
+/* Edit button specific styles */
+.edit-button {
+  margin-right: 5px;
+  background-color: #4caf50;
+}
+
+/* Delete button specific styles */
+.delete-button {
+  margin-left: 5px;
+  background-color: rgb(240, 174, 174);
+}
+
+.task-container.completed {
+  opacity: 0.3; /* Adjust opacity to make completed tasks appear greyed out */
+}
+
+.task-container.completed .description {
+  color: #999; /* Adjust text color for completed tasks */
+}
+.timestamp {
+  font-size: 12px; /* Adjust font size for the timestamp */
+  margin-right: 10px;
+}
+select {
+  padding: 8px; /* Adjust padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  background-color: #fff; /* Set background color */
+  font-size: 14px; /* Adjust font size */
+  cursor: pointer; /* Show pointer cursor on hover */
+  outline: none; /* Remove outline */
+}
+
+/* Hover effect */
+select:hover {
+  border-color: #4caf50; /* Change border color on hover */
+}
+
+/* Focus effect */
+select:focus {
+  border-color: #4caf50; /* Change border color when focused */
+}
